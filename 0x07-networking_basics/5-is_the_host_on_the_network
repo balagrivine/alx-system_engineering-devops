@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+adr=$1
+if (($adr!$1))
+	echo "none"
