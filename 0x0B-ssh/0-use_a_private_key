@@ -2,4 +2,8 @@
 
 #A script thatuses ssh to connect to your server using the private key ~/.ssh/school with the user ubuntu
 
-ssh -i ~/.ssh/school ubuntu@52.1.28.34
+private_key = "~/.ssh/school"
+server_address  = 52.1.28.34
+ssh_user = "ubuntu"
+ssh_command = "ssh -i $private_key $ssh_user@$server_address
+$ssh_command
