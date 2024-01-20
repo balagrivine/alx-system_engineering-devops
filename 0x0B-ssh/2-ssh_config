@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#client-side configuration to disable pasword configuration
+#client-side configuration to disable password configuration
 
 Host *
 	IdentifyFile ~/.ssh/school
