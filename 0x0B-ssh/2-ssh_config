@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#client-side configuration to disable pasword configuration
+
+Host *
+	IdentifyFile ~/.ssh/school
+	PasswordAuthentication no
