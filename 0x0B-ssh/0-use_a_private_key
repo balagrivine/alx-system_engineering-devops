@@ -2,5 +2,4 @@
 
 #A script thatuses ssh to connect to your server using the private key ~/.ssh/school with the user ubuntu
 
-ssh-copy-id ubuntu@420083-web-01
-ssh ubuntu@52.1.28.34
+~/.ssh/school ssh ubuntu@52.1.28.34
