@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#write a bash script that install Nginx server
+
+#update the sysytem
+sudo apt update
+
+#install nginx server
+sudo apt install nginx
+
+#server configurations
+sudo echo "Hello World!" | sudo tee /var/www/html/index.html
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://kifaruproperties.com/ permanent;' /etc/nginx/sites-available/default
+
+sudo service nginx reload
+sudo service nginx  start
