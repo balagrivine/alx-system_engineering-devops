@@ -6,10 +6,8 @@ sudo apt update
 
 #install nginx server
 sudo apt install nginx
-
+sudo ufw allow 'Nginx HTTP'
 #server configurations
 sudo echo "Hello World!" | sudo tee /var/www/html/index.html
-sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://kifaruproperties.com/ permanent;' /etc/nginx/sites-available/default
-
-sudo service nginx reload
-sudo service nginx  start
+sudo sed -n '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4/ permanent;' /etc/nginx/sites-available/default
+sudo service nginx  restart
