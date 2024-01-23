@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#script to debug a web stack
+
+echo "Hello Holberton" | sudo tee /var/www/html/index.html
