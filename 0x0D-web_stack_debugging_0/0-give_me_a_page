@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #script to debug a web stack
 
-service apache2 start
+sudo service apache2 start
