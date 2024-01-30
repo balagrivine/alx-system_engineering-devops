@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+#write a bash script that cnfigures a nginx server to listen to port 80
