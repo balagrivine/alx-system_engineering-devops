@@ -1,2 +1,10 @@
 #!/usr/bin/env bash
 #Double the number of webservers
+
+#installing nginx
+sudo apt update
+sudo apt install nginx
+
+#adding custom header
+sudo sed -i "/http {/a\	add_header x-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+sudo service nginx restart
