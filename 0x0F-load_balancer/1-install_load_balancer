@@ -6,3 +6,19 @@ sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.9
 
 sudo apt-get install haproxy=2.9.\*
+
+balance = "\
+frontend haproxy_balancer
+	bind *:80
+	mode http
+	default_backend: webserver
+
+backend webserver
+	balance roundrobin
+	server 420083-web-01 52.1.28.34:80 check
+	server 420083-web-02 34.224.5.156:80 check
+"
+
+sudo echo "$balance" >> /etc/haproxy/haproxy.cgf
+
+sudo service haproxy restart
