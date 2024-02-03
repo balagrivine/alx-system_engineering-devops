@@ -9,5 +9,5 @@ server_name=$(hostname)
 
 #adding custom header
 sudo sed -i "/server_name_;/a\
-	add_header X-Served-By $server_name;" /etc/nginx/sites-enabled/default
+	add_header X-Served-By $server_name" /etc/nginx/sites-enabled/default
 sudo service nginx restart
