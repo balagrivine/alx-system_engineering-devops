@@ -2,17 +2,19 @@
 #Install your load balancer
 
 #install HAproxy
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.9
+sudo apt -y update
+sudo apt -y upgrade
+#sudo apt-get install --no-install-recommends software-properties-common
+#sudo add-apt-repository ppa:vbernat/haproxy-2.9
 
-sudo apt-get install haproxy=2.9.\*
+sudo apt-get -y install haproxy
 
 balancer=\
 "
 frontend haproxy_balancer
 	bind *:80
 	mode http
-	default_backend: webserver
+	default_backend webserver
 
 backend webserver
 	balance roundrobin
