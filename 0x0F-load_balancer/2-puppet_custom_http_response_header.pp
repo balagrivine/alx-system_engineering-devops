@@ -1,4 +1,5 @@
-update package information
+#!/usr/bin/env bash
+#update package information
 exec { 'apt-update':
   command => '/usr/bin/apt-get -y update',
   path    => ['/usr/bin', '/bin'],
