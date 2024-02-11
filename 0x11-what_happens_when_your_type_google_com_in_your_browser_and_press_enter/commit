@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "hello" > file
 git add .
 git commit -m "networking"
 git push
+rm file
