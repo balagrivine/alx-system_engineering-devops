@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Hello World" >> dummp
+git add .
+git commit -m "add dummy file"
+git push
+
