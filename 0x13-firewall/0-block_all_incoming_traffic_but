@@ -5,9 +5,7 @@ sudo apt update
 
 sudo apt install ufw
 
-sudo ufw enable
-
-sudo service ufw enable
+sudo ufw disable
 
 sudo ufw default deny incoming
 
