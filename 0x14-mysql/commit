@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo "MySQL Backup" >> backup
+git add .
+git commit -m "MySQL Backup"
+git push
